@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Your Loving Bank</title>
   <link rel="icon"  type="image/icon" href="favicon.ico">
+  <link rel="stylesheet" type="text/css" href="http://csshake.surge.sh/csshake-slow.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css2?family=Averia+Libre:ital,wght@1,300;1,700&family=Baloo+2:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
@@ -12,8 +14,8 @@
 
 </head>
 <body>
-  <div class="h-100 row align-items-center">
-    <div class="span6 offset3 center_container">
+  <div class="h-100 row align-items-center slide-in-elliptic-top-fwd">
+    <div class="span6 offset3 center_container" id="atm" style="display: block;">
 
       <div class="col-12  main_heading text-center">   
         <h1><i class="fas fa-handshake"></i> Bank HaBoalim</h1>
@@ -38,7 +40,7 @@
 
         <div class="screen" id="screen_2">
           
-          <p><span id="account_balance">Your Account Balance:&nbsp;&nbsp;₪<span id="bank"></span></span>
+          <p id="account_balance_text"><span id="account_balance">Your Account Balance:&nbsp;&nbsp;₪<span id="bank"></span></span>
           <br/>Why don't you give us some money</p>
   
           <p id="message">Enter Amount:</p>
@@ -51,8 +53,14 @@
       </div>
 
       <div class="col-12 text-center wallet_container">
-        <p><i class="fas fa-piggy-bank"></i><br/>Money in your Wallet: ₪<span id="wallet"></span></p>
+        <p><i class="fas fa-piggy-bank" id="piggy"></i><br/>Money in your Wallet: ₪<span id="wallet"></span></p>
       </div>
+
+      <div class="col-12 text-center p-10">
+        <button class="btn btn-danger" id="kick" onclick="kickATM()">Kick The ATM</button>
+      </div>
+
+      
 
 
     </div>

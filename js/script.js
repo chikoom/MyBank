@@ -27,6 +27,12 @@ function withdraw(amount){
   } else if (amount > 0){
     console.log(cantWithdraw)
     document.getElementById('message').innerText = cantWithdraw;
+
+    const element = document.getElementById('account_balance_text');
+    element.classList.add('animate__animated', 'animate__flash');
+    element.addEventListener('animationend', () => {
+      element.classList.remove('animate__animated', 'animate__flash');
+    });
   }
 }
 
@@ -41,6 +47,14 @@ function deposit(amount){
   } else if (amount > 0){
     console.log(cantDeposit);
     document.getElementById('message').innerText = cantDeposit;
+    
+    const element = document.getElementById('piggy');
+    element.classList.add('animate__animated', 'animate__heartBeat');
+    element.addEventListener('animationend', () => {
+      element.classList.remove('animate__animated', 'animate__heartBeat');
+    });
+
+    
   }
 }
 
@@ -100,8 +114,6 @@ function correctPIN(isCorrect){
   }
   var flashingTimes = 3;
   var flashing = setIntervalX(flashItem.bind(null,message),1000, 2);
-  //inputScreen = document.getElementById("screen_1");
-  //inputScreen.style.display = "none";
 }
 
 
@@ -124,4 +136,16 @@ function setIntervalX(callback, delay, repetitions) {
           window.clearInterval(intervalID);
       }
     }, delay);
+}
+
+function kickATM(){
+
+
+  const element = document.getElementById('atm');
+
+    element.classList.add('shake-slow','shake-constant');
+    window.setTimeout(() => {
+      element.classList.remove('shake-slow','shake-constant');
+    }, 2000);
+
 }
