@@ -1,0 +1,152 @@
+@font-face {
+  font-family: DRPecker;
+  src: url(../assets/dr-pecker-regular-1.woff);
+}
+
+html,
+body{
+  background-color: #409be6;
+  height: 100%;
+  background-image: url(../assets/moneybg.jpg);
+  background-size: cover;
+}
+h1{
+  font-size:35px;
+  font-weight: 700;
+}
+h2{
+  font-size: 15px;
+  font-weight: 300;
+}
+h3{
+  font-size: 40px;
+}
+.main_heading{
+  padding: 20px;
+  width: 100%;
+  font-family: 'Averia Libre', cursive;
+  background-color: #bb2c20;
+  color: #fff;
+  border-bottom: 10px solid #8b1d1d;
+  margin:0;
+}
+.main_heading .fa-handshake{
+  font-size: 35px;
+  text-align: center;
+}
+
+
+.center_container{
+  
+  margin: auto;
+  width: 90%;
+  max-width: 500px;
+  min-width: 250px;
+  margin: auto;
+  border: 15px solid #fff;
+  background-color: #000;
+
+}
+#main_wrapper {
+  text-align: center;
+  display: block;
+  position: relative;
+  height: 350px;
+  background-color: #daecfa;
+  font-family: 'Baloo 2', cursive;
+}
+.wallet_container{
+  background-color: #a34e09;
+  color: #fff;
+  margin: 20px auto;
+  height: auto;
+  width: 80%;
+  border: 5px solid #742f07;
+  font-family: 'Baloo 2', cursive;
+  font-size: 17px;
+}
+
+.wallet_container .fa-piggy-bank{
+  font-size: 35px;
+}
+.wallet_container p{
+  padding: 20px 0;
+  margin: 0;
+}
+.screen {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #daecfa;
+  padding: 50px 10px 10px 10px;
+}
+#screen_2{
+  display: none;
+}
+#message
+{
+  display: block;
+}
+.hidden_msg{
+  display: block;
+  height: 50px;
+  line-height: 50px;
+  opacity: 0;
+}
+#pincode{
+  font-family: DRPecker;
+  font-size:45px;
+  width: 200px;
+}
+#account_balance{
+  font-size: 25px;
+}
+#amount{
+  width: 95%;
+  max-width: 300px;
+}
+input{
+  padding:2px;
+  font-size:45px;
+  font-family: DRPecker;
+  text-align: center;
+  font-weight: 500;
+  
+  display: block;
+  margin: auto;
+}
+.btn{
+  margin: 10px;
+}
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+@media screen and (max-width: 400px) {
+  h1{
+    font-size:25px;
+  }
+  h2{
+    font-size: 10px;
+  }
+  #main_wrapper {
+    height: 370px;
+  }
+  .main_heading .fa-handshake{
+    font-size: 25px;
+    line-height: 45px;
+  }
+  .wallet_container{
+    font-size: 15px;
+  }
+}
